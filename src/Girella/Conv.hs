@@ -2,7 +2,7 @@
     DefaultSignatures
   , TypeFamilies
   #-}
-module Silk.Opaleye.Conv (Conv (..)) where
+module Girella.Conv (Conv (..)) where
 
 -- | Convert an opaleye result to a separate type.
 --

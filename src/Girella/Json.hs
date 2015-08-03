@@ -12,7 +12,7 @@
   , UndecidableInstances
   #-}
 -- | Json data stored in a postgres text column, this does not decode into a specific type.
-module Silk.Opaleye.Json
+module Girella.Json
   ( Json (..)
   , toJson
   , fromJson
@@ -23,7 +23,7 @@ import Data.Aeson.Utils
 import Data.String.Conversions
 import Language.Haskell.TH
 
-import Silk.Opaleye.TH
+import Girella.TH
 
 newtype Json = Json { unJson :: Value }
   deriving (Eq, FromJSON, Show, ToJSON, Typeable)

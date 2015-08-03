@@ -16,8 +16,8 @@ import Control.Arrow
 import Control.Category
 import Data.UUID
 
-import Silk.Opaleye
-import Silk.Opaleye.TH
+import Girella
+import Girella.TH
 
 newtype Id = Id { unId :: UUID }
   deriving (Show, Typeable)

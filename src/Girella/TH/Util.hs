@@ -1,4 +1,4 @@
-module Silk.Opaleye.TH.Util
+module Girella.TH.Util
   ( getConNameTy
   , ty
   , simpleName
@@ -8,7 +8,7 @@ module Silk.Opaleye.TH.Util
 import Language.Haskell.TH
 import Language.Haskell.TH.Syntax
 
-import Silk.Opaleye.Misc (trd3)
+import Girella.Misc (trd3)
 
 simpleName :: String -> Name
 simpleName = mkName

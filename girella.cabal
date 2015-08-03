@@ -1,43 +1,44 @@
-name:                silk-db-opaleye
-version:             0.2.1
-license:             OtherLicense
+name:                girella
+version:             1.0.0
+license:             BSD3
+license-file:        LICENSE
 synopsis:            Wrapper over Opaleye
 description:         Wrapper over Opaleye
 author:              Silk B.V.
 maintainer:          code@silk.co
 copyright:           2014 Silk B.V.
-category:            Silk
+category:            Database
 build-type:          Simple
 cabal-version:       >=1.10
 
 library
   default-language:  Haskell2010
-  ghc-options:       -Wall -Werror
+  ghc-options:       -Wall
   hs-source-dirs:    src
   exposed-modules:
-    Silk.Opaleye
-    Silk.Opaleye.Aggregation
-    Silk.Opaleye.Combinators
-    Silk.Opaleye.Compat
-    Silk.Opaleye.Config
-    Silk.Opaleye.Conv
-    Silk.Opaleye.Json
-    Silk.Opaleye.Misc
-    Silk.Opaleye.Operators
-    Silk.Opaleye.Order
-    Silk.Opaleye.Query
-    Silk.Opaleye.Range
-    Silk.Opaleye.Run
-    Silk.Opaleye.ShowConstant
-    Silk.Opaleye.TH
-    Silk.Opaleye.TH.Column
-    Silk.Opaleye.TH.Table
-    Silk.Opaleye.Table
-    Silk.Opaleye.To
-    Silk.Opaleye.Transaction
+    Girella
+    Girella.Aggregation
+    Girella.Combinators
+    Girella.Config
+    Girella.Conv
+    Girella.Json
+    Girella.Misc
+    Girella.Operators
+    Girella.Order
+    Girella.Query
+    Girella.Range
+    Girella.Run
+    Girella.ShowConstant
+    Girella.TH
+    Girella.TH.Column
+    Girella.TH.Table
+    Girella.Table
+    Girella.To
+    Girella.Transaction
   other-modules:
-    Silk.Opaleye.Transaction.Q
-    Silk.Opaleye.TH.Util
+    Girella.Compat
+    Girella.TH.Util
+    Girella.Transaction.Q
   build-depends:
       base >= 4.6 && < 4.9
     , aeson-utils >= 0.2 && < 0.4

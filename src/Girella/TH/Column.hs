@@ -1,5 +1,5 @@
 {-# LANGUAGE NoImplicitPrelude #-}
-module Silk.Opaleye.TH.Column
+module Girella.TH.Column
   ( -- * TH end points
     mkId
   , makeColumnInstances
@@ -32,9 +32,9 @@ import Opaleye.RunQuery (fieldQueryRunnerColumn)
 import Opaleye.RunQuery (QueryRunnerColumnDefault (..))
 import Safe (headNote)
 
-import Silk.Opaleye.Compat (classP_, equalP_)
-import Silk.Opaleye.ShowConstant (ShowConstant (..))
-import Silk.Opaleye.TH.Util (getConNameTy, ty)
+import Girella.Compat (classP_, equalP_)
+import Girella.ShowConstant (ShowConstant (..))
+import Girella.TH.Util (getConNameTy, ty)
 
 -- TODO This assumes the destructor is named unId, can be changed to a pattern match.
 -- TODO It's probably too lenient with input as well, only newtypes or constructors with one field are allowed.
@@ -46,7 +46,7 @@ mkId = return . either error id <=< f <=< reify
       TyConI (NewtypeD _ctx tyName _tyVars@[] con _names) ->
         case getConNameTy con of
           Left err      -> return $ Left err
-          Right (conName, innerTy) -> Right <$> g tyName conName (headNote "Silk.Opaleye.TH.Column.mkId innerTy" innerTy)
+          Right (conName, innerTy) -> Right <$> g tyName conName (headNote "Girella.TH.Column.mkId innerTy" innerTy)
       TyConI NewtypeD{} -> return $ Left "Type variables aren't allowed"
       _  -> return $ Left "Must be a newtype"
 

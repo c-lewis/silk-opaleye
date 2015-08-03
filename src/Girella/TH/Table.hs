@@ -1,5 +1,5 @@
 {-# LANGUAGE LambdaCase #-}
-module Silk.Opaleye.TH.Table
+module Girella.TH.Table
   ( -- * TH End points
     makeTypes
   , makeTable
@@ -28,9 +28,9 @@ import Language.Haskell.TH.Syntax
 import Opaleye.Column (Column, Nullable)
 import Opaleye.Table (Table (Table))
 
-import Silk.Opaleye.TH.Util (ambiguateName, simpleName, ty)
-import Silk.Opaleye.Table (optionalColumn)
-import Silk.Opaleye.To (To)
+import Girella.TH.Util (ambiguateName, simpleName, ty)
+import Girella.Table (optionalColumn)
+import Girella.To (To)
 
 makeTypes :: Q [Dec] -> Q [Dec]
 makeTypes = (fmap concat . mapM makeType =<<)

@@ -1,5 +1,5 @@
 {-# LANGUAGE FlexibleContexts #-}
-module Silk.Opaleye.Order
+module Girella.Order
   ( Order
   , asc
   , desc
@@ -11,7 +11,7 @@ import Opaleye.Order (Order, orderBy)
 import Opaleye.Order (PGOrd)
 import qualified Opaleye.Order as O
 
-import Silk.Opaleye.ShowConstant
+import Girella.ShowConstant
 
 asc :: PGOrd (PGRep b) => (a -> Column b) -> Order a
 asc f = O.asc $ safeCoerceToRep . f

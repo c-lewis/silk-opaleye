@@ -1,5 +1,5 @@
 {-# LANGUAGE Rank2Types #-}
-module Silk.Opaleye.Config
+module Girella.Config
   ( Config
   , connectionPool
   , maxTries

@@ -9,7 +9,7 @@
   , TypeFamilies
   , UndecidableInstances
   #-}
-module Silk.Opaleye.ShowConstant
+module Girella.ShowConstant
   ( ShowConstant (..)
   , safeCoerceToRep
   , safeCoerceFromRep

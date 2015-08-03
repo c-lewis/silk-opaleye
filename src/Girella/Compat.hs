@@ -3,7 +3,7 @@
   , FlexibleInstances
   , TypeSynonymInstances
   #-}
-module Silk.Opaleye.Compat
+module Girella.Compat
   ( equalP_
   , classP_
   ) where
